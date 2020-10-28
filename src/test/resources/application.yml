@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: server
+  r2dbc:
+    url: jdbc:h2:mem:history;INIT=CREATE SCHEMA IF NOT EXISTS history;
+    username: sa
+  h2:
+    console:
+      enabled: true
+
+  jackson:
+    serialization:
+      WRITE_BIGDECIMAL_AS_PLAIN: false
+    deserialization:
+      USE_BIG_DECIMAL_FOR_FLOATS: true
+
+base:
+  url: http://localhost:8086
+
+server:
+  port: 8086
